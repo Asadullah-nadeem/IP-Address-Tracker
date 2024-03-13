@@ -8,9 +8,7 @@ include 'db.php'
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>IP Address Tracker</title>
-    <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <!-- Custom CSS -->
     <style>
         body {
             background-color: #f8f9fa;
@@ -59,7 +57,7 @@ include 'db.php'
             var locationContainer = document.getElementById("locationContainer");
             locationContainer.innerHTML = "Latitude: " + latitude + "<br>Longitude: " + longitude;
             var xhr = new XMLHttpRequest();
-            xhr.open("POST", "", true); // Leave the URL empty to send to the same page
+            xhr.open("POST", "", true); 
             xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
             xhr.onreadystatechange = function () {
                 if (xhr.readyState == 4 && xhr.status == 200) {
